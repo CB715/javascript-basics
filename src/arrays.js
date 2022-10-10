@@ -35,27 +35,35 @@ const uppercaseWordsInArray = strings => {
 };
 
 const reverseWordsInArray = strings => {
-  
+  return strings.map(newString =>
+    newString.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  const newNumbers = numbers.filter(even => even % 2 === 0);
+  return newNumbers;
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.slice(0, index).concat(array.slice(index +1));
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  let vowel = /^[aeiou]/i;
+  return strings.filter(str => vowel.test(str));
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  const startPoint = 0;
+  const total = numbers.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    startPoint
+  );
+  return total;
 };
 
 const sortByLastLetter = strings => {
