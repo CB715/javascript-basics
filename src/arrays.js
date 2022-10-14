@@ -12,7 +12,7 @@ const csvStringToArray = string => {
 
 const addToArray = (element, array) => {
   array.push(element);
-  array;
+  
 };
 
 const addToArray2 = (element, array) => {
@@ -67,8 +67,19 @@ const sumNumbers = numbers => {
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverseString = item =>
+    item
+      .split('')
+      .reverse()
+      .join('');
+
+  return strings
+    .map(reverseString)
+    .sort()
+    .map(reverseString);
 };
+// couldn't do this
+
 
 module.exports = {
   getNthElement,
