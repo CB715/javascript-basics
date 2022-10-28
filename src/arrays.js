@@ -7,7 +7,7 @@ const arrayToCSVString = array => {
 };
 
 const csvStringToArray = string => {
-  return string.split(",");
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
@@ -36,7 +36,11 @@ const uppercaseWordsInArray = strings => {
 
 const reverseWordsInArray = strings => {
   return strings.map(newString =>
-    newString.split('').reverse().join(''));
+    newString
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
@@ -78,8 +82,6 @@ const sortByLastLetter = strings => {
     .sort()
     .map(reverseString);
 };
-// couldn't do this
-
 
 module.exports = {
   getNthElement,
